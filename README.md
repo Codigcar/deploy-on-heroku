@@ -34,6 +34,20 @@ spring.jpa.show-sql=false
 spring.jpa.generate-ddl=true
 spring.jpa.hibernate.ddl-auto=create
 ```
+Con DDL Script Data BD Initialize
+```
+spring.datasource.url=${JDBC_DATABASE_URL}
+spring.datasource.username=${JDBC_DATABASE_USERNAME}
+spring.datasource.password=${JDBC_DATABASE_PASSWORD}
+
+#DLL
+spring.jpa.show-sql=true
+spring.datasource.initialization-mode=always
+
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=create
+```
+
 
 **Important note**:  
 It's important that at first time you leave this last line and set it `create` so that your database gets created. 
